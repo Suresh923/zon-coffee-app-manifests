@@ -2,8 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+annotations:
+    argocd.argoproj.io/sync-wave: "5"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/hook: PostSync  
 spec:
-  replicas: 3 # Number of desired replicas (pods)
+  replicas: 5 # Number of desired replicas (pods)
   selector:
     matchLabels:
       app: zon # Label to select pods for this deployment
