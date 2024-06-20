@@ -8,10 +8,14 @@ annotations:
     argocd.argoproj.io/hook: PostSync  
 spec:
 <<<<<<< HEAD
+<<<<<<< HEAD
   replicas: 5 # Number of desired replicas (pods)
 =======
   replicas: 2 # Number of desired replicas (pods)
 >>>>>>> d631071 (replicas changed to 2)
+=======
+  replicas: 5 # Number of desired replicas (pods)
+>>>>>>> a26f7f5 (replicas changed)
   selector:
     matchLabels:
       app: zon # Label to select pods for this deployment
